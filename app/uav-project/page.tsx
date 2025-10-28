@@ -30,7 +30,7 @@ export default function UAVProject() {
         {/* Main Project Image */}
         <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg">
           <Image
-            src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1814.JPG"
+            src="/images/design-mode/IMG_1814.JPG.jpg"
             alt="UAV Design"
             fill
             className="object-cover"
@@ -119,7 +119,7 @@ export default function UAVProject() {
                 <h4 className="mb-2 font-semibold">B-21 Raider</h4>
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                   <Image
-                    src="https://upload.wikimedia.org/wikipedia/commons/4/4a/B-21-in-flight.jpg"
+                    src="/images/design-mode/B-21-in-flight.jpg"
                     alt="B-21 Raider Side Profile"
                     fill
                     className="object-cover"
@@ -130,7 +130,7 @@ export default function UAVProject() {
                 <h4 className="mb-2 font-semibold">MQ-28 Ghost Bat</h4>
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                   <Image
-                    src="https://www.boeing.com.au/content/dam/boeing/en-au/media/boeingaustralia/boeing-airpower-teaming-system/MQ-28A_Ghost_Bat_Courtesy_Defence.jpg"
+                    src="/images/design-mode/MQ-28A_Ghost_Bat_Courtesy_Defence.jpg"
                     alt="MQ-28 Ghost Bat"
                     fill
                     className="object-cover"
@@ -272,7 +272,7 @@ export default function UAVProject() {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Plane%20CFD.png"
+              src="/images/design-mode/Plane%20CFD.png"
               alt="UAV CFD Analysis"
               fill
               className="object-cover"
@@ -280,7 +280,7 @@ export default function UAVProject() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/NEwPlane-vtREgGyfPQJehXX3fh3fPy6N8GMGVS.png"
+              src="/images/design-mode/NEwPlane.png"
               alt="UAV Project Perspective View"
               fill
               className="object-cover"
@@ -288,7 +288,7 @@ export default function UAVProject() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gallery1-1x31PslsDEcBNYXuaS9oBgKVq0IdUW.png"
+              src="/images/design-mode/Gallery1.png"
               alt="UAV Project Side View"
               fill
               className="object-cover"
@@ -296,7 +296,7 @@ export default function UAVProject() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1229-a8dhZbdSZ7DqJ9qCeysh8RKlooTWYb.JPG"
+              src="/images/design-mode/IMG_1229.jpg"
               alt="UAV Prototype assembly"
               fill
               className="object-cover"
@@ -304,7 +304,7 @@ export default function UAVProject() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gallery2-lErQ8vQtTLZGkkYt4ix7owPTJXHmqN.png"
+              src="/images/design-mode/Gallery2.png"
               alt="UAV Project Perspective View"
               fill
               className="object-cover"

@@ -15,7 +15,7 @@ import Link from "next/link"
     <CardContent>
       <div className="relative aspect-video overflow-hidden rounded-lg">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gallery1-f93eOiY7MMqX2tEa8wXSSmyR81S5Zi.png"
+          src="/images/design-mode/Gallery1.png"
           alt="UAV Design"
           fill
           className="object-cover"

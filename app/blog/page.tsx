@@ -20,7 +20,7 @@ export default function BlogPage() {
         <CardContent>
           <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-4">
             <Image
-              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1819%202.JPG"
+              src="/images/design-mode/IMG_1819%202.JPG.jpg"
               alt="UAV Summer Update"
               fill
               className="object-contain bg-background"
@@ -63,7 +63,7 @@ export default function BlogPage() {
           </p>
           <div className="relative aspect-video w-full overflow-hidden rounded-lg mt-6 mb-4">
             <Image
-              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1229-a8dhZbdSZ7DqJ9qCeysh8RKlooTWYb.JPG"
+              src="/images/design-mode/IMG_1229.jpg"
               alt="UAV Prototype assembly"
               fill
               className="object-contain bg-background"
