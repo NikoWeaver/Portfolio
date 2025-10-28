@@ -49,14 +49,7 @@ export default function WindTunnelTranslationProject() {
   const [modelLoaded, setModelLoaded] = useState(false)
 
   useEffect(() => {
-    const originalError = console.error
-    console.error = (...args) => {
-      if (args[0]?.includes?.("THREE.GLTFLoader") && args[0]?.includes?.("texture")) {
-        return
-      }
-      originalError.apply(console, args)
-    }
-
+    // Load the model-viewer script
     if (!document.querySelector('script[src*="model-viewer"]')) {
       const script = document.createElement("script")
       script.type = "module"
@@ -64,30 +57,23 @@ export default function WindTunnelTranslationProject() {
       document.head.appendChild(script)
 
       script.onload = () => {
+        // Add event listeners after script loads
         setTimeout(() => {
           const modelViewer = document.querySelector("model-viewer")
           if (modelViewer) {
-            setModelLoaded(true)
-
             modelViewer.addEventListener("load", () => {
               setModelLoaded(true)
               setModelError(false)
             })
 
             modelViewer.addEventListener("error", (event) => {
-              const errorDetail = (event as any)?.detail
-              if (errorDetail && !errorDetail.message?.includes("texture")) {
-                setModelError(true)
-                setModelLoaded(false)
-              }
+              console.error("Model viewer error:", event)
+              setModelError(true)
+              setModelLoaded(false)
             })
           }
-        }, 500)
+        }, 1000)
       }
-    }
-
-    return () => {
-      console.error = originalError
     }
   }, [])
 
@@ -152,13 +138,12 @@ export default function WindTunnelTranslationProject() {
         */}
 
         {/* Project Image */}
-        <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg bg-white flex items-center justify-center">
+        <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg">
           <Image
-            src="/images/design-mode/logo_fpc.png"
-            alt="FPC Lab - University of Utah"
-            width={600}
-            height={200}
-            className="object-contain"
+            src="/placeholder.svg?height=600&width=800"
+            alt="Wind Tunnel Translation System"
+            fill
+            className="object-cover"
             priority
           />
         </div>
@@ -168,35 +153,13 @@ export default function WindTunnelTranslationProject() {
           {/* Control Algorithm Code Block */}
           <Card>
             <CardHeader>
-              <CardTitle>Inverse Kinematics</CardTitle>
-              <CardDescription>MATLAB inverse kinematics implementation</CardDescription>
+              <CardTitle>Control Algorithm</CardTitle>
+              <CardDescription>Python control system implementation</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="bg-muted rounded-lg p-4 overflow-x-auto">
-                <pre className="text-[10px] leading-tight font-mono">
-                  <code>{`function [r1,r2,r3] = fcn(x,y,r,e,L1_val,L2_val,L3_val)
-  y = -y;
-  x3 = x-(L3_val*cosd(r));
-  y3 = y-(L3_val*sind(r));
-  C = sqrt(x3^2 + y3^2);
-  A = acosd((L1_val^2 + L2_val^2 - C^2 )/(2*L1_val*L2_val));
-  B = acosd((L1_val^2 + C^2 - L2_val^2 )/(2*L1_val*C));
-  if C > (L1_val+L2_val)
-    r1 = 0;
-    r2 = 0;
-    r3 = 0;
-  elseif e == 1
-    r1 = atan2d(y3,x3)-B;
-    r2 = 180-A;
-    r3 = r - r1 -r2;
-  else
-    r1 = atan2d(y3,x3)+B;
-    r2 = A-180;
-    r3 = r - r1 -r2;
-  end
-  %r1 = r1 + 90;
-  %r2 = r2 - 90;
-end`}</code>
+                <pre className="text-sm">
+                  <code>I used inverse kinematics to control the robot.  The input to equation solve for the three joint angles based on the length of each joint, the desired X and Y position, and desired angle</code>
                 </pre>
               </div>
             </CardContent>
@@ -206,29 +169,12 @@ end`}</code>
           <Card>
             <CardHeader>
               <CardTitle>Arm optimization</CardTitle>
-              <CardDescription>
-                Every simulation the optimal robot arm is generated. In this case, optimal means the least possible
-                joint length for the specified conditions. The factors that decide this are
-              </CardDescription>
+              <CardDescription>Every simulation the optimal robot arm is generated.  In this case, optimal means the least possible joint length for the specified conditions.  The factors that decide this are</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="bg-muted rounded-lg p-4 overflow-x-auto">
-                <pre className="text-[10px] leading-tight font-mono">
-                  <code>{`
-            
-Pos1 = [X_val-L3_val*cosd(AngleRange_val+AngleInitial_val),
-Y_val+L3_val*sind(AngleRange_val+AngleInitial_val)];
-
-Pos2 = [X_val-L3_val*cosd(-AngleRange_val+AngleInitial_val),
-Y_val+L3_val*sind(-AngleRange_val+AngleInitial_val)];
-  
-MaxDist = max(norm(Pos1), norm(Pos2));
-norm(Pos1);
-L1_val = MaxDist/2 + 5; +5mm for a bit of safety margin
-L2_val = MaxDist/2 + 5; 
-                  
-                  
-                  `}</code>
+                <pre className="text-sm">
+                  <code>Lorem ipsum dolor sit amet...</code>
                 </pre>
               </div>
             </CardContent>
@@ -241,16 +187,18 @@ L2_val = MaxDist/2 + 5;
             <CardContent className="pt-6">
               <h3 className="font-semibold mb-2">Control Algorithm Implementation</h3>
               <p className="text-muted-foreground text-sm">
-                At each timestep, the desired position is input, and the inverse kinamtics solver outputs the angle that each motor must reach in order to move the robotic arm's end effector to that desired position.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="pt-6">
-              <h3 className="font-semibold mb-2">Data collection details</h3>
+              <h3 className="font-semibold mb-2">Arduino Firmware Details</h3>
               <p className="text-muted-foreground text-sm">
-                At each timestep, after solving for inverse kinematics and then moving each joint, the torque that each motor outputs is exported into a csv file and then plotted.  It is important to note that the torque data must be first put through a low-pass filter, becuase matlab will sometimes output extremely high or low torque values for just one time step.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
             </CardContent>
           </Card>
@@ -265,13 +213,16 @@ L2_val = MaxDist/2 + 5;
           <CardContent>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                The main design constarint for this robotic arm was that I had to use Unitree GO-M8010-6 motors on each joint.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p className="text-muted-foreground">
-                While I never built the full arm, this was the final design iteration.  Each part was prototyped using a 3D printer, and validated to fit together.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p className="text-muted-foreground">
-                The aluminum tube design of the arm allows for different joint lengths to be easily tested, without need for total redesign if the arm geometry needs to change.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
             </div>
           </CardContent>
@@ -291,10 +242,10 @@ L2_val = MaxDist/2 + 5;
                   alt="Wind Tunnel Translation Mechanism 3D Model"
                   auto-rotate
                   camera-controls
-                  shadow-intensity="0.3"
+                  shadow-intensity="0.5"
                   camera-orbit="45deg 75deg 8m"
-                  exposure="1.0"
-                  shadow-softness="0.5"
+                  exposure="0.8"
+                  shadow-softness="0.8"
                   interaction-prompt="auto"
                   interaction-prompt-threshold="2000"
                   style={{
@@ -306,6 +257,31 @@ L2_val = MaxDist/2 + 5;
                   loading="eager"
                   reveal="auto"
                 >
+                  <div
+                    slot="progress-bar"
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      textAlign: "center",
+                      zIndex: 100,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "4px solid #f3f3f3",
+                        borderTop: "4px solid #3498db",
+                        borderRadius: "50%",
+                        animation: "spin 1s linear infinite",
+                        margin: "0 auto 16px",
+                      }}
+                    ></div>
+                    <p style={{ color: "#666", fontSize: "14px" }}>Loading 3D Model...</p>
+                  </div>
+
                   <div
                     slot="error"
                     style={{
@@ -319,7 +295,7 @@ L2_val = MaxDist/2 + 5;
                   >
                     <p style={{ color: "#e74c3c", fontSize: "16px", marginBottom: "8px" }}>Unable to load 3D model</p>
                     <p style={{ color: "#666", fontSize: "14px" }}>
-                      Try downloading the file to view in external 3D software.
+                      The model may contain unsupported textures or formats.
                     </p>
                     <Button
                       variant="outline"
@@ -353,7 +329,9 @@ L2_val = MaxDist/2 + 5;
                     </div>
                     <h3 className="text-lg font-semibold mb-2">3D Model Preview</h3>
                     <p className="text-muted-foreground mb-4">Wind Tunnel Translation Mechanism</p>
-                    <p className="text-sm text-muted-foreground mb-4">Unable to display the 3D model in the browser.</p>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      The 3D model contains texture files that cannot be displayed in the browser viewer.
+                    </p>
                     <Button
                       variant="outline"
                       onClick={() =>
@@ -369,7 +347,7 @@ L2_val = MaxDist/2 + 5;
             <p className="mt-4 text-muted-foreground text-sm">
               {modelLoaded
                 ? "Interactive 3D model - Use mouse to rotate, zoom, and pan around the model."
-                : "3D model of the wind tunnel translation mechanism. The model geometry will display even if textures fail to load."}
+                : "3D model of the wind tunnel translation mechanism. If the model doesn't load, you can download the GLB file to view in external 3D software."}
             </p>
           </CardContent>
         </Card>

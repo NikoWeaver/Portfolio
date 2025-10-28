@@ -81,7 +81,7 @@ export default function CombatRoboticsProject() {
               <h4 className="mb-2 font-semibold">CAD Prototype</h4>
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/images/design-mode/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM.png"
+                  src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM-8in5uhFdWVSg6MwfOb4OWQhSUhgjyh.png"
                   alt="Combat Robot CAD Model"
                   fill
                   className="object-contain bg-background"
@@ -127,7 +127,7 @@ export default function CombatRoboticsProject() {
               <h4 className="mb-2 font-semibold">CAD Prototype</h4>
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/images/design-mode/Screenshot%202025-04-09%20at%201.47.43%E2%80%AFPM.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.47.43%E2%80%AFPM-KgEa1Z6NZzbMbLwLsqQRDKYwMGw6u7.png"
                   alt="Combat Robot CAD Model"
                   fill
                   className="object-contain bg-background"
@@ -240,7 +240,7 @@ export default function CombatRoboticsProject() {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src="/images/design-mode/Screenshot%202025-04-09%20at%201.47.43%E2%80%AFPM.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.47.43%E2%80%AFPM-KgEa1Z6NZzbMbLwLsqQRDKYwMGw6u7.png"
               alt="Beta Freak"
               fill
               className="object-contain bg-background"

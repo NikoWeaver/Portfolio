@@ -94,7 +94,7 @@ export default function Home() {
             <Link href="/uav-project">
               <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/IMG_1814.JPG.jpg"
+                  src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1814.JPG"
                   alt="UAV Design"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -117,7 +117,7 @@ export default function Home() {
             <Link href="/underwater-rov">
               <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/Minibot%20render.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Minibot%20render-8VNVx5cU7OnkLV89ePrNVPWApd0ElG.png"
                   alt="Underwater ROV"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -132,30 +132,13 @@ export default function Home() {
                   Designed key structural components and performed hydrodynamic analysis for an autonomous underwater
                   ROV (aka an AUV) for the Duke Robotics Club.
                 </p>
-              </CardContent>
-            </Link>
-          </Card>
-
-          {/* Wind Tunnel Translation Project */}
-          <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/wind-tunnel-translation">
-              <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/logo_fpc.png"
-                  alt="Wind Tunnel Translation Project"
-                  fill
-                  className="object-contain bg-white transition-transform duration-300 hover:scale-105"
+                  src="https://duke-robotics.com/wp-content/uploads/2019/04/title_logo-1.png"
+                  alt="Duke Robotics Club Logo"
+                  width={500}
+                  height={70}
+                  className="mt-2"
                 />
-              </div>
-              <CardHeader>
-                <CardTitle>Wind Tunnel Translation Project</CardTitle>
-                <CardDescription>4-Axis Robot Arm for Wind Tunnel Testing</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Designed a 4-axis robot arm to move models in a wind tunnel for the University of Utah Aerospace
-                  Engineering Department.
-                </p>
               </CardContent>
             </Link>
           </Card>
@@ -165,7 +148,7 @@ export default function Home() {
             <Link href="/combat-robotics">
               <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM.png"
+                  src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM-8in5uhFdWVSg6MwfOb4OWQhSUhgjyh.png"
                   alt="Combat Robot"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -178,7 +161,7 @@ export default function Home() {
               <CardContent>
                 <p className="text-sm text-muted-foreground">See my robots for Duke Combat robotics club!</p>
                 <Image
-                  src="/images/design-mode/LOGO_-_Combat_Robotics.png"
+                  src="https://combatrobotics.wiki.duke.edu/images/2/2d/LOGO_-_Combat_Robotics.png"
                   alt="Duke Robotics Club Logo"
                   width={150}
                   height={150}
@@ -193,7 +176,7 @@ export default function Home() {
             <Link href="/frc-robot">
               <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/3245bot.png.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3245bot.png-bvCoWHqQ7D1V0Ziw3oXpDPbieC9rdm.jpeg"
                   alt="FRC Robot"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -216,7 +199,7 @@ export default function Home() {
             <Link href="/model-rocket">
               <div className="relative aspect-video">
                 <Image
-                  src="/images/design-mode/Rocket111.jpg.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rocket111.jpg-p266SRo3kx0i2oX5qYUs9BRK8L7xAC.jpeg"
                   alt="Model Rocket"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"

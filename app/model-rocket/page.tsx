@@ -28,7 +28,7 @@ export default function ModelRocketProject() {
         {/* Main Project Image */}
         <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg">
           <Image
-            src="/images/design-mode/Rocket222.JPG.jpeg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rocket222.JPG-N3wP2cxQa8plmhbBLOSYVxsaEBE6tg.jpeg"
             alt="Model Rocket"
             fill
             className="object-contain"
