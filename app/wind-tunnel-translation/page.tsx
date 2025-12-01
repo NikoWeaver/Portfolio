@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { ArrowLeft } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -48,17 +49,6 @@ export default function WindTunnelTranslationProject() {
   const [modelLoaded, setModelLoaded] = useState(false)
 
   useEffect(() => {
-    const originalError = console.error
-    console.error = (...args) => {
-      if (
-        args[0]?.includes?.("THREE.GLTFLoader") ||
-        (typeof args[0] === "string" && args[0].includes("Couldn't load texture"))
-      ) {
-        return
-      }
-      originalError.apply(console, args)
-    }
-
     // Load the model-viewer script
     if (!document.querySelector('script[src*="model-viewer"]')) {
       const script = document.createElement("script")
@@ -77,20 +67,13 @@ export default function WindTunnelTranslationProject() {
             })
 
             modelViewer.addEventListener("error", (event) => {
-              const errorMsg = String(event)
-              if (!errorMsg.includes("texture")) {
-                console.error("Model viewer error:", event)
-                setModelError(true)
-              }
-              setModelLoaded(true)
+              console.error("Model viewer error:", event)
+              setModelError(true)
+              setModelLoaded(false)
             })
           }
         }, 1000)
       }
-    }
-
-    return () => {
-      console.error = originalError
     }
   }, [])
 
@@ -156,10 +139,12 @@ export default function WindTunnelTranslationProject() {
 
         {/* Project Image */}
         <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg">
-          <img
-            src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Multibody%20Explorer%20-%20Optimized_Arm%202025-11-30%2020-25-38%20%28online-video-cutter.com%29.gif"
-            alt="Wind Tunnel Translation System Animation"
-            className="w-full h-full object-cover"
+          <Image
+            src="/placeholder.svg?height=600&width=800"
+            alt="Wind Tunnel Translation System"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
 
@@ -168,36 +153,13 @@ export default function WindTunnelTranslationProject() {
           {/* Control Algorithm Code Block */}
           <Card>
             <CardHeader>
-              <CardTitle>Inverse Kinematics</CardTitle>
-              <CardDescription>MATLAB control system implementation</CardDescription>
+              <CardTitle>Control Algorithm</CardTitle>
+              <CardDescription>Python control system implementation</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted rounded-lg p-3 overflow-hidden max-h-96">
-                <pre className="text-[10px] leading-tight whitespace-pre-wrap break-words font-mono">
-                  <code>{`function [r1,r2,r3] = fcn(x,y,r,e,L1_val,L2_val,L3_val)
-    y = -y; %not sure why the joints are messed up, but this fixes it :)
-    
-    x3 = x-(L3_val*cosd(r));
-    y3 = y-(L3_val*sind(r));
-
-    C = sqrt(x3^2 + y3^2);
-    a = acosd((L1_val^2 + L2_val^2 - C^2 )/(2*L1_val*L2_val));
-    B = acosd((L1_val^2 + C^2 - L2_val^2 )/(2*L1_val*C));
-
-    if C > (L1_val+L2_val)
-        r1 = 0;
-        r2 = 0;
-        r3 = 0;
-    elseif e == 1
-        r1 = atan2d(y3,x3)-B;
-        r2 = 180-a;
-        r3 = r - r1 -r2;
-    else
-        r1 = atan2d(y3,x3)+B;
-        r2 = a-180;
-        r3 = r - r1 -r2;
-    end
-end`}</code>
+              <div className="bg-muted rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>I used inverse kinematics to control the robot.  The input to equation solve for the three joint angles based on the length of each joint, the desired X and Y position, and desired angle</code>
                 </pre>
               </div>
             </CardContent>
@@ -207,70 +169,60 @@ end`}</code>
           <Card>
             <CardHeader>
               <CardTitle>Arm optimization</CardTitle>
-              <CardDescription>
-                Every simulation the optimal robot arm is generated. In this case, optimal means the least possible
-                joint length for the specified conditions. The simulation finds the maximum total joint length, then
-                sets each joint to be half of that length, plus 5mm for clearence.
-              </CardDescription>
+              <CardDescription>Every simulation the optimal robot arm is generated.  In this case, optimal means the least possible joint length for the specified conditions.  The factors that decide this are</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted rounded-lg p-3 overflow-hidden max-h-96">
-                <pre className="text-[10px] leading-tight whitespace-pre-wrap break-words font-mono">
-                  <code>{`% Optimization Algorithm
-% Finds maximum total joint length
-L_total = max_workspace_distance
-
-% Distribute length equally with clearance
-clearance = 5; % mm
-L_per_joint = (L_total / 2) - clearance;
-
-% Set joint parameters
-L1 = L_per_joint;
-L2 = L_per_joint;
-L3 = L_per_joint / 2;
-
-% Validate arm geometry
-if check_constraints(L1, L2, L3, conditions)
-    arm_optimal = true;
-else
-    % Adjust parameters
-    [L1, L2, L3] = refine_geometry(...);
-end`}</code>
+              <div className="bg-muted rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>Lorem ipsum dolor sit amet...</code>
                 </pre>
               </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* IRL Description */}
+        {/* Code Block Descriptions */}
+        <div className="grid gap-8 md:grid-cols-2 mb-8">
+          <Card>
+            <CardContent className="pt-6">
+              <h3 className="font-semibold mb-2">Control Algorithm Implementation</h3>
+              <p className="text-muted-foreground text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6">
+              <h3 className="font-semibold mb-2">Arduino Firmware Details</h3>
+              <p className="text-muted-foreground text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Technical Description */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>Physical Implementation</CardTitle>
+            <CardTitle>Technical Implementation</CardTitle>
             <CardDescription>System Architecture and Design Considerations</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                I designed the arm to use aluminum tubes for the joints in order to have it be easily customized, but
-                still very rigid.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p className="text-muted-foreground">
-                While the final arm was not built, the process to build it would be as follows:
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
               <p className="text-muted-foreground">
-                Use the MATLAB simulation to find the optimal arm geometry generated from the given set of initial
-                conditions.
-              </p>
-              <p className="text-muted-foreground">
-                Then the maximum actuator torques could be used to decide if the desired conditions were feasible for
-                the chosen actuators.
-              </p>
-              <p className="text-muted-foreground">
-                Once a desired arm geometry has been settled on, the aluminum tubes could be cut to the correct lengths
-                and then assembled to make the full arm.
-              </p>
-              <p className="text-muted-foreground">
-                Below is the full CAD model of the arm I designed. Please take a look at the model!!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
               </p>
             </div>
           </CardContent>
@@ -305,6 +257,31 @@ end`}</code>
                   loading="eager"
                   reveal="auto"
                 >
+                  <div
+                    slot="progress-bar"
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      textAlign: "center",
+                      zIndex: 100,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "4px solid #f3f3f3",
+                        borderTop: "4px solid #3498db",
+                        borderRadius: "50%",
+                        animation: "spin 1s linear infinite",
+                        margin: "0 auto 16px",
+                      }}
+                    ></div>
+                    <p style={{ color: "#666", fontSize: "14px" }}>Loading 3D Model...</p>
+                  </div>
+
                   <div
                     slot="error"
                     style={{
