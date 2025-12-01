@@ -1,6 +1,6 @@
+import "./globals.css"
 import type React from "react"
 import Link from "next/link"
-import "./globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/ui/theme-toggle"

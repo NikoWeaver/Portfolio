@@ -91,8 +91,8 @@ export default function Home() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* UAV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/uav-project">
-              <div className="relative aspect-video">
+            <Link href="/uav-project" className="block">
+              <div className="relative aspect-video" style={{ position: 'relative' }}>
                 <Image
                   src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1814.JPG"
                   alt="UAV Design"
@@ -114,8 +114,8 @@ export default function Home() {
 
           {/* Underwater AUV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/underwater-rov">
-              <div className="relative aspect-video">
+            <Link href="/underwater-rov" className="block">
+              <div className="relative aspect-video" style={{ position: 'relative' }}>
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Minibot%20render-8VNVx5cU7OnkLV89ePrNVPWApd0ElG.png"
                   alt="Underwater ROV"
@@ -145,8 +145,8 @@ export default function Home() {
 
           {/* Combat Robotics Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/combat-robotics">
-              <div className="relative aspect-video">
+            <Link href="/combat-robotics" className="block">
+              <div className="relative aspect-video" style={{ position: 'relative' }}>
                 <Image
                   src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM-8in5uhFdWVSg6MwfOb4OWQhSUhgjyh.png"
                   alt="Combat Robot"
@@ -173,8 +173,8 @@ export default function Home() {
 
           {/* FRC Robot Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/frc-robot">
-              <div className="relative aspect-video">
+            <Link href="/frc-robot" className="block">
+              <div className="relative aspect-video" style={{ position: 'relative' }}>
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3245bot.png-bvCoWHqQ7D1V0Ziw3oXpDPbieC9rdm.jpeg"
                   alt="FRC Robot"
@@ -196,8 +196,8 @@ export default function Home() {
 
           {/* Model Rocket Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/model-rocket">
-              <div className="relative aspect-video">
+            <Link href="/model-rocket" className="block">
+              <div className="relative aspect-video" style={{ position: 'relative' }}>
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rocket111.jpg-p266SRo3kx0i2oX5qYUs9BRK8L7xAC.jpeg"
                   alt="Model Rocket"
