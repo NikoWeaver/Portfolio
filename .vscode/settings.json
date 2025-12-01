@@ -4,4 +4,3 @@
   "less.lint.unknownAtRules": "ignore",
   "css.customData": [".vscode/css_custom_data.json"]
 }
-
