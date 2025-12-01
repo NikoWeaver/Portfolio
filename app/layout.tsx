@@ -21,12 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-background`}>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Suspense fallback={<div>Loading...</div>}>
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="container flex h-14 items-center">
-                <nav className="flex items-center  space-x-4 lg:space-x-6">
+                <nav className="flex items-center space-x-4 lg:space-x-6">
                   <Link href="/#home" className="text-sm ml-5 font-medium transition-colors hover:text-primary">
                     Home
                   </Link>
@@ -45,7 +45,7 @@ export default function RootLayout({
                 </div>
               </div>
             </header>
-            <main>{children}</main>
+            <main className="min-h-screen bg-background">{children}</main>
           </Suspense>
         </ThemeProvider>
       </body>
