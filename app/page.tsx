@@ -133,12 +133,36 @@ export default function Home() {
                   ROV (aka an AUV) for the Duke Robotics Club.
                 </p>
                 <Image
-                  src="https://duke-robotics.com/wp-content/uploads/2019/04/title_logo-1.png"
+                  src="https://duke-robotics.com/wp-content/uploads/2024/03/cropped-retro-logo-fullwhite-1-1-1.png"
                   alt="Duke Robotics Club Logo"
                   width={500}
                   height={70}
                   className="mt-2"
                 />
+              </CardContent>
+            </Link>
+          </Card>
+
+          {/* Wind Tunnel Translation Project */}
+          <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
+            <Link href="/wind-tunnel-translation">
+              <div className="relative aspect-video">
+                <Image
+                  src="https://fpc.mech.utah.edu/wp-content/uploads/2024/03/logo_fpc.png"
+                  alt="Wind Tunnel Translation Project"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>Wind Tunnel Translation Project</CardTitle>
+                <CardDescription>University of Utah - Aerospace Research</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Designed a 4-axis robot arm to move a model in a wind tunnel. Used MATLAB to simulate the robot arm in
+                  real-time operation.
+                </p>
               </CardContent>
             </Link>
           </Card>
