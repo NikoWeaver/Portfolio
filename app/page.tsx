@@ -92,7 +92,7 @@ export default function Home() {
           {/* UAV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/uav-project" className="block">
-              <div className="relative aspect-video" style={{ position: 'relative' }}>
+              <div className="relative aspect-video" style={{ position: "relative" }}>
                 <Image
                   src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1814.JPG"
                   alt="UAV Design"
@@ -115,9 +115,9 @@ export default function Home() {
           {/* Underwater AUV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/underwater-rov" className="block">
-              <div className="relative aspect-video" style={{ position: 'relative' }}>
+              <div className="relative aspect-video" style={{ position: "relative" }}>
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Minibot%20render-8VNVx5cU7OnkLV89ePrNVPWApd0ElG.png"
+                  src="/images/minibot-20render.png"
                   alt="Underwater ROV"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -143,10 +143,34 @@ export default function Home() {
             </Link>
           </Card>
 
+          {/* Wind Tunnel Translation Project */}
+          <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
+            <Link href="/wind-tunnel-translation" className="block">
+              <div className="relative aspect-video" style={{ position: "relative" }}>
+                <Image
+                  src="https://fpc.mech.utah.edu/wp-content/uploads/2024/03/logo_fpc.png"
+                  alt="Wind Tunnel Robot Arm"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>Wind Tunnel Translation Project</CardTitle>
+                <CardDescription>University of Utah - 4-Axis Robot Arm</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Designed and optimized a 4-axis robot arm to translate models in a wind tunnel. Used MATLAB for
+                  inverse kinematics and real-time control simulation.
+                </p>
+              </CardContent>
+            </Link>
+          </Card>
+
           {/* Combat Robotics Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/combat-robotics" className="block">
-              <div className="relative aspect-video" style={{ position: 'relative' }}>
+              <div className="relative aspect-video" style={{ position: "relative" }}>
                 <Image
                   src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM-8in5uhFdWVSg6MwfOb4OWQhSUhgjyh.png"
                   alt="Combat Robot"
@@ -174,9 +198,9 @@ export default function Home() {
           {/* FRC Robot Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/frc-robot" className="block">
-              <div className="relative aspect-video" style={{ position: 'relative' }}>
+              <div className="relative aspect-video" style={{ position: "relative" }}>
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3245bot.png-bvCoWHqQ7D1V0Ziw3oXpDPbieC9rdm.jpeg"
+                  src="/images/3245bot.jpeg"
                   alt="FRC Robot"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
@@ -197,9 +221,9 @@ export default function Home() {
           {/* Model Rocket Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/model-rocket" className="block">
-              <div className="relative aspect-video" style={{ position: 'relative' }}>
+              <div className="relative aspect-video" style={{ position: "relative" }}>
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rocket111.jpg-p266SRo3kx0i2oX5qYUs9BRK8L7xAC.jpeg"
+                  src="/images/rocket111.jpeg"
                   alt="Model Rocket"
                   fill
                   className="object-cover transition-transform duration-300 hover:scale-105"
