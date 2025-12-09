@@ -5,7 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const skills = [
-  { name: "Fusion 360", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fusion360_Logo.svg/250px-Fusion360_Logo.svg.png" },
+  {
+    name: "Fusion 360",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fusion360_Logo.svg/250px-Fusion360_Logo.svg.png",
+  },
   { name: "SolidWorks", logo: "https://upload.wikimedia.org/wikipedia/en/d/d2/SolidWorks_Logo.svg" },
   { name: "MATLAB", logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" },
   { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
@@ -17,7 +20,10 @@ const skills = [
     name: "Adobe Illustrator",
     logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
   },
-  { name: "Siemens NX", logo: "https://i0.wp.com/colombiantools.com/wp-content/uploads/2024/05/Logos-de-siemens-2023-4.png?fit=500%2C500&ssl=1" },
+  {
+    name: "Siemens NX",
+    logo: "https://i0.wp.com/colombiantools.com/wp-content/uploads/2024/05/Logos-de-siemens-2023-4.png?fit=500%2C500&ssl=1",
+  },
 ]
 
 export default function Home() {
@@ -71,19 +77,8 @@ export default function Home() {
       {/* About Me Section */}
       <section id="about" className="container mx-auto px-4 py-16">
         <h2 className="mb-8 text-center text-4xl font-bold tracking-tighter sm:text-5xl">About Me</h2>
-        <div className="flex flex-col items-center gap-8">
-          {/* Image commented out as requested
-          <div className="md:w-1/2">
-            <Image
-              src="/placeholder.svg?height=400&width=400"
-              alt="Niko Weaver"
-              width={400}
-              height={400}
-              className="rounded-full"
-            />
-          </div>
-          */}
-          <div className="w-full">
+        <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+          <div className="flex-1">
             <p className="text-lg text-muted-foreground">
               Hello! I'm Niko Weaver, a Mechanical Engineering student at Duke University. I am really interested in
               Aerospace and Robotics! I love to play Guitar, Ski and build Rockets
@@ -97,6 +92,15 @@ export default function Home() {
                 <Link href="#projects">View My Projects</Link>
               </Button>
             </div>
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_0171.JPG"
+              alt="Niko Weaver"
+              width={280}
+              height={350}
+              className="rounded-sm object-cover"
+            />
           </div>
         </div>
       </section>
@@ -235,7 +239,7 @@ export default function Home() {
               </CardContent>
             </Link>
           </Card>
-          
+
           {/* Model Rocket Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/model-rocket" className="block">
