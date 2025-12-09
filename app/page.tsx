@@ -4,6 +4,22 @@ import { Phone, Linkedin, Mail, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
+const skills = [
+  { name: "Fusion 360", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fusion360_Logo.svg/250px-Fusion360_Logo.svg.png" },
+  { name: "SolidWorks", logo: "https://upload.wikimedia.org/wikipedia/en/d/d2/SolidWorks_Logo.svg" },
+  { name: "MATLAB", logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" },
+  { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
+  { name: "Ansys", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/ANSYS_logo.png" },
+  { name: "Arduino", logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" },
+  { name: "Java", logo: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
+  { name: "Adobe Photoshop", logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
+  {
+    name: "Adobe Illustrator",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
+  },
+  { name: "Siemens NX", logo: "https://i0.wp.com/colombiantools.com/wp-content/uploads/2024/05/Logos-de-siemens-2023-4.png?fit=500%2C500&ssl=1" },
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -133,7 +149,7 @@ export default function Home() {
                   ROV (aka an AUV) for the Duke Robotics Club.
                 </p>
                 <Image
-                  src="https://duke-robotics.com/wp-content/uploads/2019/04/title_logo-1.png"
+                  src="https://duke-robotics.com/wp-content/uploads/2024/03/cropped-retro-logo-fullwhite-1-1-1.png"
                   alt="Duke Robotics Club Logo"
                   width={500}
                   height={70}
@@ -168,6 +184,8 @@ export default function Home() {
           </Card>
 
           {/* Combat Robotics Project */}
+
+          {/*
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/combat-robotics" className="block">
               <div className="relative aspect-video" style={{ position: "relative" }}>
@@ -194,7 +212,7 @@ export default function Home() {
               </CardContent>
             </Link>
           </Card>
-
+*/}
           {/* FRC Robot Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/frc-robot" className="block">
@@ -217,7 +235,7 @@ export default function Home() {
               </CardContent>
             </Link>
           </Card>
-
+          
           {/* Model Rocket Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/model-rocket" className="block">
@@ -241,6 +259,48 @@ export default function Home() {
               </CardContent>
             </Link>
           </Card>
+        </div>
+      </section>
+
+      {/* Skills Section with scrolling logos */}
+      <section id="skills" className="py-16 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center md:text-6xl font-bold tracking-tighter">Skills</h2>
+        </div>
+        <div className="relative">
+          {/* Gradient overlays for fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+
+          {/* Scrolling container */}
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            {skills.map((skill, index) => (
+              <div key={`skill-1-${index}`} className="flex-shrink-0 mx-8 flex flex-col items-center justify-center">
+                <div className="w-20 h-20 flex items-center justify-center bg-card rounded-lg p-3 shadow-md">
+                  <img
+                    src={skill.logo || "/placeholder.svg"}
+                    alt={skill.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <span className="mt-2 text-sm text-muted-foreground">{skill.name}</span>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {skills.map((skill, index) => (
+              <div key={`skill-2-${index}`} className="flex-shrink-0 mx-8 flex flex-col items-center justify-center">
+                <div className="w-20 h-20 flex items-center justify-center bg-card rounded-lg p-3 shadow-md">
+                  <img
+                    src={skill.logo || "/placeholder.svg"}
+                    alt={skill.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <span className="mt-2 text-sm text-muted-foreground">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
