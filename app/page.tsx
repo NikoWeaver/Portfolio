@@ -317,7 +317,7 @@ export default function Home() {
             <Button className="flex items-center gap-2">
               <Download className="h-4 w-4" />
               <a
-                href="https://drive.google.com/file/d/1d2OFM8HKAMxMuZhgnBw4-9NqP2V0vR_5/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ADDdEgI0B6UA1kOSVFh_01BGYTikMD35/download"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
