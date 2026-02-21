@@ -422,7 +422,7 @@ export default function Home() {
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Leadership</h2>
     <h3 className="text-xl font-medium">Duke Robotics Club Chief Engineer</h3>
-    <p className="italic mb-2">Fall 2025 - Present</p>
+    <p className="italic mb-2">Fall 2024 - Present</p>
 
     <h3 className="text-xl font-medium">High School Robotics Team Captain and Mechanical Lead</h3>
     <p className="italic mb-2">Fall 2022 - Spring 2024</p>
