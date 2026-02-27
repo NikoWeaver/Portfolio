@@ -317,7 +317,7 @@ export default function Home() {
       <Button className="flex items-center gap-2">
         <Download className="h-4 w-4" />
         <a
-          href="/mnt/data/Resume1072025.pdf"
+          href="/mnt/data/Resume010426.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -349,18 +349,21 @@ export default function Home() {
     </p>
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Education</h2>
+    <p className="mb-2">
+      <strong>Relevant Coursework:</strong> Space Systems Design, Thermodynamics, Mechatronics, Dynamics
+    </p>
+
     <h3 className="text-xl font-medium">Duke University, Durham NC</h3>
     <p className="italic mb-2">Expected Spring 2028</p>
     <ul className="list-disc list-inside mb-4">
       <li>Bachelor of Science in Engineering</li>
       <li>Major in Mechanical Engineering, Aerospace Certificate, Minor in Math</li>
-      <li>Relevant Coursework: Space Systems Design, Thermodynamics, Mechatronics, Dynamics</li>
     </ul>
 
     <h3 className="text-xl font-medium">Waterford School, Sandy UT</h3>
     <p className="italic mb-2">August 2020 - June 2024</p>
     <ul className="list-disc list-inside mb-4">
-      <li>High school diploma, Summa Cum Laude.</li>
+      <li>High school diploma, Summa Cum Laude</li>
     </ul>
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Technical Skills</h2>
@@ -378,7 +381,7 @@ export default function Home() {
     <ul className="list-disc list-inside mb-4">
       <li>Designed and flew an autonomous fixed wing UAV.</li>
       <li>Used CFD to optimize and validate geometries.</li>
-      <li>Currently Iterating after the first flight to increase thrust and optimize airfoils.</li>
+      <li>Currently iterating after the first flight to increase thrust and optimize airfoils.</li>
     </ul>
 
     <h3 className="text-xl font-medium">Underwater AUV - Duke Robotics Club</h3>
@@ -392,7 +395,7 @@ export default function Home() {
     <p className="italic mb-2">Summer 2023</p>
     <ul className="list-disc list-inside mb-4">
       <li>Designed, built, and flew a 1 meter long canard-guided rocket.</li>
-      <li>Used an IMU and Arduino uno for closed-loop control to maintain trajectory.</li>
+      <li>Used an IMU and Arduino Uno for closed-loop control to maintain trajectory.</li>
     </ul>
 
     <h3 className="text-xl font-medium">FRC Robot</h3>
@@ -409,7 +412,7 @@ export default function Home() {
     <p className="font-medium mb-2">Duke University General Robotics Lab</p>
     <ul className="list-disc list-inside mb-4">
       <li>Leading a project to create an underwater swarm robot.</li>
-      <li>Currently focusing on underwater locomotion and inter-robot communication.</li>
+      <li>Focusing on underwater locomotion and inter-robot communication.</li>
     </ul>
 
     <h3 className="text-xl font-medium">Undergraduate Intern</h3>
