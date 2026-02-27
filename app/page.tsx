@@ -317,7 +317,7 @@ export default function Home() {
       <Button className="flex items-center gap-2">
         <Download className="h-4 w-4" />
         <a
-          href="https://drive.google.com/file/d/1d2OFM8HKAMxMuZhgnBw4-9NqP2V0vR_5/view?usp=sharing"
+          href="/mnt/data/Resume010426.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -349,18 +349,21 @@ export default function Home() {
     </p>
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Education</h2>
+    <p className="mb-2">
+      <strong>Relevant Coursework:</strong> Space Systems Design, Thermodynamics, Mechatronics, Dynamics
+    </p>
+
     <h3 className="text-xl font-medium">Duke University, Durham NC</h3>
     <p className="italic mb-2">Expected Spring 2028</p>
     <ul className="list-disc list-inside mb-4">
       <li>Bachelor of Science in Engineering</li>
       <li>Major in Mechanical Engineering, Aerospace Certificate, Minor in Math</li>
-      <li>Relevant Coursework: Thermodynamics, Differential equations, Properties of Solids</li>
     </ul>
 
     <h3 className="text-xl font-medium">Waterford School, Sandy UT</h3>
     <p className="italic mb-2">August 2020 - June 2024</p>
     <ul className="list-disc list-inside mb-4">
-      <li>High school diploma, Summa Cum Laude, 3.95 GPA</li>
+      <li>High school diploma, Summa Cum Laude</li>
     </ul>
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Technical Skills</h2>
@@ -378,7 +381,7 @@ export default function Home() {
     <ul className="list-disc list-inside mb-4">
       <li>Designed and flew an autonomous fixed wing UAV.</li>
       <li>Used CFD to optimize and validate geometries.</li>
-      <li>Iterating after the first flight to increase thrust and optimize airfoils.</li>
+      <li>Currently iterating after the first flight to increase thrust and optimize airfoils.</li>
     </ul>
 
     <h3 className="text-xl font-medium">Underwater AUV - Duke Robotics Club</h3>
@@ -409,7 +412,7 @@ export default function Home() {
     <p className="font-medium mb-2">Duke University General Robotics Lab</p>
     <ul className="list-disc list-inside mb-4">
       <li>Leading a project to create an underwater swarm robot.</li>
-      <li>Currently focusing on underwater locomotion and inter-robot communication.</li>
+      <li>Focusing on underwater locomotion and inter-robot communication.</li>
     </ul>
 
     <h3 className="text-xl font-medium">Undergraduate Intern</h3>
@@ -422,7 +425,7 @@ export default function Home() {
 
     <h2 className="text-2xl font-semibold mt-6 mb-2">Leadership</h2>
     <h3 className="text-xl font-medium">Duke Robotics Club Chief Engineer</h3>
-    <p className="italic mb-2">Fall 2024 - Present</p>
+    <p className="italic mb-2">Fall 2025 - Present</p>
 
     <h3 className="text-xl font-medium">High School Robotics Team Captain and Mechanical Lead</h3>
     <p className="italic mb-2">Fall 2022 - Spring 2024</p>

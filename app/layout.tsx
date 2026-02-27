@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
-import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -48,7 +47,6 @@ export default function RootLayout({
             </header>
             <main>{children}</main>
           </Suspense>
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
