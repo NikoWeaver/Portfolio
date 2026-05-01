@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { Suspense } from "react"
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
