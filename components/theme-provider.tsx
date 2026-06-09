@@ -45,6 +45,7 @@ export function ThemeProvider({
     const root = document.documentElement
     root.classList.remove("light", "dark")
     root.classList.add(theme)
+    root.style.colorScheme = theme
     try {
       window.localStorage.setItem(STORAGE_KEY, theme)
     } catch {
