@@ -116,8 +116,8 @@ export default function UAVProject() {
             </div>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <div>
-                <h4 className="mb-2 font-semibold">B-21 Raider</h4>
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
+                <h4 className="mb-2 font-semibold text-center">B-21 Raider</h4>
+                <div className="relative aspect-[16/9] max-w-md mx-auto overflow-hidden rounded-lg">
                   <Image
                     src="https://upload.wikimedia.org/wikipedia/commons/4/4a/B-21-in-flight.jpg"
                     alt="B-21 Raider Side Profile"
@@ -127,10 +127,10 @@ export default function UAVProject() {
                 </div>
               </div>
               <div>
-                <h4 className="mb-2 font-semibold">MQ-28 Ghost Bat</h4>
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
+                <h4 className="mb-2 font-semibold text-center">MQ-28 Ghost Bat</h4>
+                <div className="relative aspect-[16/9] max-w-md mx-auto overflow-hidden rounded-lg">
                   <Image
-                    src="https://www.boeing.com/content/dam/boeing/v2/products/mq-28-ghost-bat/mq-28-ghost-bat-roadblock-2.jpg"
+                    src="/images/mq28.jpg"
                     alt="MQ-28 Ghost Bat"
                     fill
                     className="object-cover"
