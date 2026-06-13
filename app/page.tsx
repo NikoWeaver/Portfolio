@@ -285,7 +285,7 @@ export default function Home() {
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold">Niko Weaver</h1>
             <Button asChild className="flex items-center gap-2">
-              <a href="/Resume010426.pdf" target="_blank" rel="noopener noreferrer" download>
+              <a href="/NikoWeaverResume.pdf" target="_blank" rel="noopener noreferrer" download>
                 <Download className="h-4 w-4" />
                 Download Resume
               </a>
@@ -328,12 +328,12 @@ export default function Home() {
           <h3 className="text-xl font-medium">Waterford School, Sandy UT</h3>
           <p className="italic mb-2">August 2020 - June 2024</p>
           <ul className="list-disc list-inside mb-4">
-            <li>High school diploma, Summa Cum Laude</li>
+            <li>High school diploma, Summa Cum Laude.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-6 mb-2">Technical Skills</h2>
           <p className="mb-2">
-            <strong>Software:</strong> Autodesk Fusion CAD, CAM, FEA; Siemens NX CAD; Solidworks CAD; Ansys Fluent CFD; Adobe Photoshop, Illustrator; Microsoft Office suite.
+            <strong>Software:</strong> Autodesk Fusion CAD, CAM, FEA; Siemens NX CAD; Solidworks CAD; Ansys Fluent CFD; Adobe Photoshop, Illustrator; Microsoft Office suite; Agentic coding;
           </p>
           <p className="mb-4">
             <strong>Languages:</strong> MATLAB, Python, Java, Arduino C++.
@@ -341,33 +341,31 @@ export default function Home() {
 
           <h2 className="text-2xl font-semibold mt-6 mb-2">Projects</h2>
 
-          <h3 className="text-xl font-medium">Autonomous UAV</h3>
-          <p className="italic mb-2">Summer 2025</p>
+          <h3 className="text-xl font-medium">Reinforcement Learning with MuJoCo</h3>
+          <p className="italic mb-2">Duke General Robotics Lab | Summer 2026</p>
           <ul className="list-disc list-inside mb-4">
-            <li>Designed and flew an autonomous fixed wing UAV.</li>
-            <li>Used CFD to optimize and validate geometries.</li>
-            <li>Currently iterating after the first flight to increase thrust and optimize airfoils.</li>
+            <li>Developed a digital twin of my robot in MuJoCo to enable iterative control strategy testing and bridge the sim-to-real gap.</li>
+            <li>Trained RL policies to automate and improve locomotion over a heuristic policy.</li>
           </ul>
 
-          <h3 className="text-xl font-medium">Underwater AUV - Duke Robotics Club</h3>
+          <h3 className="text-xl font-medium">Autonomous UAV</h3>
+          <p className="italic mb-2">Duke Co-Lab grant project | Summer 2025 - Present</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Engineered an autonomous UAV through three design iterations, leveraging CFD analysis to optimize wing geometry and enhance flight endurance.</li>
+          </ul>
+
+          <h3 className="text-xl font-medium">RoboSub AUV - Duke Robotics Club</h3>
           <p className="italic mb-2">Fall 2024 - Present</p>
           <ul className="list-disc list-inside mb-4">
-            <li>Lead the design of multiple major mechanical components of an autonomous submarine using Solidworks CAD and Ansys Fluent.</li>
-            <li>RoboSub 2025 Competition Finalist - 7th place Overall, 3rd best Design report.</li>
+            <li>Led design for primary structural components; redesigned the buoyancy system using CAD/FEA simulation, reducing drag by 30% and improving control.</li>
+            <li>7th Place Overall at RoboSub 2025 and 3rd Best Design Report.</li>
           </ul>
 
-          <h3 className="text-xl font-medium">Self-guided Rocket</h3>
-          <p className="italic mb-2">Summer 2023</p>
+          <h3 className="text-xl font-medium">Self-Guided Rocket</h3>
+          <p className="italic mb-2">Independent Project | Summer 2023</p>
           <ul className="list-disc list-inside mb-4">
-            <li>Designed, built, and flew a 1 meter long canard-guided rocket.</li>
-            <li>Used an IMU and Arduino Uno for closed-loop control to maintain trajectory.</li>
-          </ul>
-
-          <h3 className="text-xl font-medium">FRC Robot</h3>
-          <p className="italic mb-2">Winter 2024</p>
-          <ul className="list-disc list-inside mb-4">
-            <li>Designed a pivoting disk shooter, electronics system, and drivetrain.</li>
-            <li>Utah regional 2nd place, Idaho Regional Quality Award.</li>
+            <li>Designed, manufactured, and test-flew a 1-meter canard-guided rocket.</li>
+            <li>Implemented a closed-loop control system using IMU sensors and Arduino to maintain stable flight trajectories during high-velocity maneuvers.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-6 mb-2">Experience</h2>
@@ -376,27 +374,25 @@ export default function Home() {
           <p className="italic mb-2">Fall 2025 - Present</p>
           <p className="font-medium mb-2">Duke University General Robotics Lab</p>
           <ul className="list-disc list-inside mb-4">
-            <li>Leading a project to create an underwater swarm robot.</li>
-            <li>Focusing on underwater locomotion and inter-robot communication.</li>
+            <li>Leading the design of an underwater rolling robot, in preparation for publication.</li>
+            <li>Developing novel locomotion and communication methods for swarm robotics.</li>
+          </ul>
+
+          <h3 className="text-xl font-medium">Chief Engineer</h3>
+          <p className="italic mb-2">Fall 2025 - Present</p>
+          <p className="font-medium mb-2">Duke Robotics Club</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Leading new AUV development for the RoboSub 2027 competition, managing systems integration and performance testing.</li>
+            <li>Coordinate cross-functional teams across mechanical, electrical, and software disciplines to ensure cohesive architecture.</li>
           </ul>
 
           <h3 className="text-xl font-medium">Undergraduate Intern</h3>
           <p className="italic mb-2">Summer 2025</p>
-          <p className="font-medium mb-2">University of Utah Aerospace Engineering Department</p>
+          <p className="font-medium mb-2">University of Utah FPC LAB</p>
           <ul className="list-disc list-inside mb-4">
-            <li>Designed a 4-axis robot arm to move a model in a wind tunnel.</li>
-            <li>Used MATLAB to simulate real-time operation and collect torque values.</li>
+            <li>Designed a custom 4-axis robot arm for wind tunnel model manipulation.</li>
+            <li>Developed MATLAB scripts to simulate real-time operation and automate the collection/analysis of torque and drag data, accelerating testing cycles.</li>
           </ul>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Leadership</h2>
-          <h3 className="text-xl font-medium">Duke Robotics Club Chief Engineer</h3>
-          <p className="italic mb-2">Fall 2025 - Present</p>
-
-          <h3 className="text-xl font-medium">High School Robotics Team Captain and Mechanical Lead</h3>
-          <p className="italic mb-2">Fall 2022 - Spring 2024</p>
-
-          <h3 className="text-xl font-medium">Science Olympiad Makerspace Vice President</h3>
-          <p className="italic mb-2">Fall 2023 - Spring 2024</p>
         </div>
       </section>
 
