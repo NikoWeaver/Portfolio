@@ -32,7 +32,7 @@ export default function Home() {
       {/* Hero */}
       <section id="home" className="container mx-auto px-4 py-24 md:py-32">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-foreground">
             Niko Weaver
           </h1>
           <p className="mt-4 text-xl text-muted-foreground">Mechanical Engineering Student at Duke University</p>
@@ -112,7 +112,7 @@ export default function Home() {
           {/* UAV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/uav-project" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
+              <div className="relative aspect-video">
                 <Image
                   src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/IMG_1814.JPG"
                   alt="UAV Design"
@@ -135,7 +135,7 @@ export default function Home() {
           {/* Underwater AUV Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/underwater-rov" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
+              <div className="relative aspect-video">
                 <Image
                   src="/images/minibot-20render.png"
                   alt="Underwater ROV"
@@ -166,7 +166,7 @@ export default function Home() {
           {/* Wind Tunnel Translation Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/wind-tunnel-translation" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
+              <div className="relative aspect-video">
                 <Image
                   src="https://fpc.mech.utah.edu/wp-content/uploads/2024/03/logo_fpc.png"
                   alt="Wind Tunnel Robot Arm"
@@ -187,40 +187,10 @@ export default function Home() {
             </Link>
           </Card>
 
-          {/* Combat Robotics Project */}
-
-          {/*
-          <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
-            <Link href="/combat-robotics" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
-                <Image
-                  src="https://zmtbsodvdekwtp1d.public.blob.vercel-storage.com/Screenshot%202025-04-09%20at%201.53.02%E2%80%AFPM-8in5uhFdWVSg6MwfOb4OWQhSUhgjyh.png"
-                  alt="Combat Robot"
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Combat Robotics</CardTitle>
-                <CardDescription>SPIN-N-OUT Battle Bot</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">See my robots for Duke Combat robotics club!</p>
-                <Image
-                  src="https://combatrobotics.wiki.duke.edu/images/2/2d/LOGO_-_Combat_Robotics.png"
-                  alt="Duke Robotics Club Logo"
-                  width={150}
-                  height={150}
-                  className="mt-2 mr-auto"
-                />
-              </CardContent>
-            </Link>
-          </Card>
-*/}
           {/* FRC Robot Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/frc-robot" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
+              <div className="relative aspect-video">
                 <Image
                   src="/images/3245bot.jpeg"
                   alt="FRC Robot"
@@ -243,7 +213,7 @@ export default function Home() {
           {/* Model Rocket Project */}
           <Card className="overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg dark:hover:shadow-primary/50 hover:shadow-primary/20">
             <Link href="/model-rocket" className="block">
-              <div className="relative aspect-video" style={{ position: "relative" }}>
+              <div className="relative aspect-video">
                 <Image
                   src="/images/rocket111.jpeg"
                   alt="Model Rocket"
@@ -314,14 +284,9 @@ export default function Home() {
   <div className="max-w-3xl mx-auto bg-card text-card-foreground p-8 rounded-lg shadow-lg">
     <div className="flex justify-between items-center mb-6">
       <h1 className="text-3xl font-bold">Niko Weaver</h1>
-      <Button className="flex items-center gap-2">
-        <Download className="h-4 w-4" />
-        <a
-          href="/mnt/data/Resume010426.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
+      <Button asChild className="flex items-center gap-2">
+        <a href="/Resume010426.pdf" target="_blank" rel="noopener noreferrer" download>
+          <Download className="h-4 w-4" />
           Download Resume
         </a>
       </Button>
