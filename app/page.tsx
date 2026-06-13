@@ -80,11 +80,11 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
           <div className="flex-1">
             <p className="text-lg text-muted-foreground">
-              Hello! I'm Niko Weaver, a Mechanical Engineering student at Duke University. I am really interested in
+              Hello! I&apos;m Niko Weaver, a Mechanical Engineering student at Duke University. I am really interested in
               Aerospace and Robotics! I love to play Guitar, Ski and build Rockets
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              I'm a very curious person, and I always love to learn new things. Right now I'm working on my UAV project
+              I&apos;m a very curious person, and I always love to learn new things. Right now I&apos;m working on my UAV project
               and have one flight in the books!
             </p>
             <div className="mt-6">
@@ -204,7 +204,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Led the mechanical design and construction of Team 3245's competition robot for the 2024 FRC season.
+                  Led the mechanical design and construction of Team 3245&apos;s competition robot for the 2024 FRC season.
                 </p>
               </CardContent>
             </Link>
@@ -278,127 +278,127 @@ export default function Home() {
         </div>
       </section>
 
-{/* Resume Section */}
-<section id="resume" className="container mx-auto px-4 py-16">
-  <h2 className="text-center font-bold tracking-tighter md:text-6xl">Resume</h2>
-  <div className="max-w-3xl mx-auto bg-card text-card-foreground p-8 rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-6">
-      <h1 className="text-3xl font-bold">Niko Weaver</h1>
-      <Button asChild className="flex items-center gap-2">
-        <a href="/Resume010426.pdf" target="_blank" rel="noopener noreferrer" download>
-          <Download className="h-4 w-4" />
-          Download Resume
-        </a>
-      </Button>
-    </div>
+      {/* Resume Section */}
+      <section id="resume" className="container mx-auto px-4 py-16">
+        <h2 className="text-center font-bold tracking-tighter md:text-6xl">Resume</h2>
+        <div className="max-w-3xl mx-auto bg-card text-card-foreground p-8 rounded-lg shadow-lg">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-3xl font-bold">Niko Weaver</h1>
+            <Button asChild className="flex items-center gap-2">
+              <a href="/Resume010426.pdf" target="_blank" rel="noopener noreferrer" download>
+                <Download className="h-4 w-4" />
+                Download Resume
+              </a>
+            </Button>
+          </div>
 
-    <p className="mb-4">
-      <a
-        href="https://linkedin.com/in/niko-weaver"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-primary hover:underline"
-      >
-        linkedin.com/in/niko-weaver
-      </a>{" "}
-      |
-      <a href="tel:+16178521905" className="text-primary hover:underline">
-        {" "}
-        +1 (617) 852-1905
-      </a>{" "}
-      |
-      <a href="mailto:nikoweaver@gmail.com" className="text-primary hover:underline">
-        {" "}
-        nikoweaver@gmail.com
-      </a>
-    </p>
+          <p className="mb-4">
+            <a
+              href="https://linkedin.com/in/niko-weaver"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              linkedin.com/in/niko-weaver
+            </a>{" "}
+            |
+            <a href="tel:+16178521905" className="text-primary hover:underline">
+              {" "}
+              +1 (617) 852-1905
+            </a>{" "}
+            |
+            <a href="mailto:nikoweaver@gmail.com" className="text-primary hover:underline">
+              {" "}
+              nikoweaver@gmail.com
+            </a>
+          </p>
 
-    <h2 className="text-2xl font-semibold mt-6 mb-2">Education</h2>
-    <p className="mb-2">
-      <strong>Relevant Coursework:</strong> Space Systems Design, Thermodynamics, Mechatronics, Dynamics
-    </p>
+          <h2 className="text-2xl font-semibold mt-6 mb-2">Education</h2>
+          <p className="mb-2">
+            <strong>Relevant Coursework:</strong> Space Systems Design, Thermodynamics, Mechatronics, Dynamics
+          </p>
 
-    <h3 className="text-xl font-medium">Duke University, Durham NC</h3>
-    <p className="italic mb-2">Expected Spring 2028</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Bachelor of Science in Engineering</li>
-      <li>Major in Mechanical Engineering, Aerospace Certificate, Minor in Math</li>
-    </ul>
+          <h3 className="text-xl font-medium">Duke University, Durham NC</h3>
+          <p className="italic mb-2">Expected Spring 2028</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Bachelor of Science in Engineering</li>
+            <li>Major in Mechanical Engineering, Aerospace Certificate, Minor in Math</li>
+          </ul>
 
-    <h3 className="text-xl font-medium">Waterford School, Sandy UT</h3>
-    <p className="italic mb-2">August 2020 - June 2024</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>High school diploma, Summa Cum Laude</li>
-    </ul>
+          <h3 className="text-xl font-medium">Waterford School, Sandy UT</h3>
+          <p className="italic mb-2">August 2020 - June 2024</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>High school diploma, Summa Cum Laude</li>
+          </ul>
 
-    <h2 className="text-2xl font-semibold mt-6 mb-2">Technical Skills</h2>
-    <p className="mb-2">
-      <strong>Software:</strong> Autodesk Fusion CAD, CAM, FEA; Siemens NX CAD; Solidworks CAD; Ansys Fluent CFD; Adobe Photoshop, Illustrator; Microsoft Office suite.
-    </p>
-    <p className="mb-4">
-      <strong>Languages:</strong> MATLAB, Python, Java, Arduino C++.
-    </p>
+          <h2 className="text-2xl font-semibold mt-6 mb-2">Technical Skills</h2>
+          <p className="mb-2">
+            <strong>Software:</strong> Autodesk Fusion CAD, CAM, FEA; Siemens NX CAD; Solidworks CAD; Ansys Fluent CFD; Adobe Photoshop, Illustrator; Microsoft Office suite.
+          </p>
+          <p className="mb-4">
+            <strong>Languages:</strong> MATLAB, Python, Java, Arduino C++.
+          </p>
 
-    <h2 className="text-2xl font-semibold mt-6 mb-2">Projects</h2>
+          <h2 className="text-2xl font-semibold mt-6 mb-2">Projects</h2>
 
-    <h3 className="text-xl font-medium">Autonomous UAV</h3>
-    <p className="italic mb-2">Summer 2025</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Designed and flew an autonomous fixed wing UAV.</li>
-      <li>Used CFD to optimize and validate geometries.</li>
-      <li>Currently iterating after the first flight to increase thrust and optimize airfoils.</li>
-    </ul>
+          <h3 className="text-xl font-medium">Autonomous UAV</h3>
+          <p className="italic mb-2">Summer 2025</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Designed and flew an autonomous fixed wing UAV.</li>
+            <li>Used CFD to optimize and validate geometries.</li>
+            <li>Currently iterating after the first flight to increase thrust and optimize airfoils.</li>
+          </ul>
 
-    <h3 className="text-xl font-medium">Underwater AUV - Duke Robotics Club</h3>
-    <p className="italic mb-2">Fall 2024 - Present</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Lead the design of multiple major mechanical components of an autonomous submarine using Solidworks CAD and Ansys Fluent.</li>
-      <li>RoboSub 2025 Competition Finalist - 7th place Overall, 3rd best Design report.</li>
-    </ul>
+          <h3 className="text-xl font-medium">Underwater AUV - Duke Robotics Club</h3>
+          <p className="italic mb-2">Fall 2024 - Present</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Lead the design of multiple major mechanical components of an autonomous submarine using Solidworks CAD and Ansys Fluent.</li>
+            <li>RoboSub 2025 Competition Finalist - 7th place Overall, 3rd best Design report.</li>
+          </ul>
 
-    <h3 className="text-xl font-medium">Self-guided Rocket</h3>
-    <p className="italic mb-2">Summer 2023</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Designed, built, and flew a 1 meter long canard-guided rocket.</li>
-      <li>Used an IMU and Arduino Uno for closed-loop control to maintain trajectory.</li>
-    </ul>
+          <h3 className="text-xl font-medium">Self-guided Rocket</h3>
+          <p className="italic mb-2">Summer 2023</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Designed, built, and flew a 1 meter long canard-guided rocket.</li>
+            <li>Used an IMU and Arduino Uno for closed-loop control to maintain trajectory.</li>
+          </ul>
 
-    <h3 className="text-xl font-medium">FRC Robot</h3>
-    <p className="italic mb-2">Winter 2024</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Designed a pivoting disk shooter, electronics system, and drivetrain.</li>
-      <li>Utah regional 2nd place, Idaho Regional Quality Award.</li>
-    </ul>
+          <h3 className="text-xl font-medium">FRC Robot</h3>
+          <p className="italic mb-2">Winter 2024</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Designed a pivoting disk shooter, electronics system, and drivetrain.</li>
+            <li>Utah regional 2nd place, Idaho Regional Quality Award.</li>
+          </ul>
 
-    <h2 className="text-2xl font-semibold mt-6 mb-2">Experience</h2>
+          <h2 className="text-2xl font-semibold mt-6 mb-2">Experience</h2>
 
-    <h3 className="text-xl font-medium">Undergraduate Researcher</h3>
-    <p className="italic mb-2">Fall 2025 - Present</p>
-    <p className="font-medium mb-2">Duke University General Robotics Lab</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Leading a project to create an underwater swarm robot.</li>
-      <li>Focusing on underwater locomotion and inter-robot communication.</li>
-    </ul>
+          <h3 className="text-xl font-medium">Undergraduate Researcher</h3>
+          <p className="italic mb-2">Fall 2025 - Present</p>
+          <p className="font-medium mb-2">Duke University General Robotics Lab</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Leading a project to create an underwater swarm robot.</li>
+            <li>Focusing on underwater locomotion and inter-robot communication.</li>
+          </ul>
 
-    <h3 className="text-xl font-medium">Undergraduate Intern</h3>
-    <p className="italic mb-2">Summer 2025</p>
-    <p className="font-medium mb-2">University of Utah Aerospace Engineering Department</p>
-    <ul className="list-disc list-inside mb-4">
-      <li>Designed a 4-axis robot arm to move a model in a wind tunnel.</li>
-      <li>Used MATLAB to simulate real-time operation and collect torque values.</li>
-    </ul>
+          <h3 className="text-xl font-medium">Undergraduate Intern</h3>
+          <p className="italic mb-2">Summer 2025</p>
+          <p className="font-medium mb-2">University of Utah Aerospace Engineering Department</p>
+          <ul className="list-disc list-inside mb-4">
+            <li>Designed a 4-axis robot arm to move a model in a wind tunnel.</li>
+            <li>Used MATLAB to simulate real-time operation and collect torque values.</li>
+          </ul>
 
-    <h2 className="text-2xl font-semibold mt-6 mb-2">Leadership</h2>
-    <h3 className="text-xl font-medium">Duke Robotics Club Chief Engineer</h3>
-    <p className="italic mb-2">Fall 2025 - Present</p>
+          <h2 className="text-2xl font-semibold mt-6 mb-2">Leadership</h2>
+          <h3 className="text-xl font-medium">Duke Robotics Club Chief Engineer</h3>
+          <p className="italic mb-2">Fall 2025 - Present</p>
 
-    <h3 className="text-xl font-medium">High School Robotics Team Captain and Mechanical Lead</h3>
-    <p className="italic mb-2">Fall 2022 - Spring 2024</p>
+          <h3 className="text-xl font-medium">High School Robotics Team Captain and Mechanical Lead</h3>
+          <p className="italic mb-2">Fall 2022 - Spring 2024</p>
 
-    <h3 className="text-xl font-medium">Science Olympiad Makerspace Vice President</h3>
-    <p className="italic mb-2">Fall 2023 - Spring 2024</p>
-  </div>
-</section>
+          <h3 className="text-xl font-medium">Science Olympiad Makerspace Vice President</h3>
+          <p className="italic mb-2">Fall 2023 - Spring 2024</p>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t py-6 text-center text-sm text-muted-foreground">
